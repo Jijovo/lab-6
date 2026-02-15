@@ -8,6 +8,7 @@ double sumArray(double* arr);
 int main() {
     double* dArray = new double[5];
     enterArrayData(dArray);
+    outputArrayData(dArray);
     delete[] dArray;
     return 0;
 }
@@ -18,7 +19,7 @@ void enterArrayData(double* arr) {
         cin >> arr[i];
     }
 }
-//Output function, displays array elements
+//Output function, displays array elements in console
 void outputArrayData(double* arr) {
     cout << "Array elements: ";
     for (int i = 0; i < 5; i++) {
@@ -26,4 +27,3 @@ void outputArrayData(double* arr) {
     }
     cout << endl;
 }
-
