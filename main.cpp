@@ -19,14 +19,14 @@ int main() {
 void enterArrayData(double* arr, int size) {
     for (int i = 0; i < size; i++) {
         cout << "Enter element " << i + 1 << ": ";
-        cin >> arr[i];
+        cin >> *(arr + i);
     }
 }
 //Output function, displays array elements in console
 void outputArrayData(double* arr, int size) {
     cout << "Array elements: ";
     for (int i = 0; i < size; i++) {
-        cout << arr[i] << " ";
+        cout << *(arr + i) << " ";
     }
     cout << endl;
 }
@@ -34,7 +34,7 @@ void outputArrayData(double* arr, int size) {
 double sumArray(double* arr, int size) {
     double sum = 0.0;
     for (int i = 0; i < size; i++) {
-        sum += arr[i];
+        sum += *(arr + i);
     }
     return sum;
 }
